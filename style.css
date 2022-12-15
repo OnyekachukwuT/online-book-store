@@ -37,6 +37,23 @@ html::-webkit-scrollbar-thumb {
     background: var(--black);
 }
 
+section{
+    padding: 5rem 9%;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover{
+    background: var(--dark-color);
+}
 .header .header-1 {
     background: #fff;
     padding: 1.5rem 9%;
@@ -158,10 +175,14 @@ body {
     justify-content: center;
     background: rgba(255, 255, 255, .9);
     position: fixed;
-    top: 0;left: 0;
-    z-index: 10000;
+    top: 0; right: -10%;
+    z-index: -10000;
     height: 100%;
     width: 100%;
+}
+
+.login-form-container .active{
+    right: 0;
 }
 .login-form-container form{
     background: #fff;
@@ -201,13 +222,74 @@ body {
     gap: 5rem;
     padding: 1rem 0;
 }
+.login-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+}
+.login-form-container form .btn{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.login-form-container form p{
+    padding-top: .8rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+.login-form-container form p a{
+    color: var(--green);
+    text-decoration: underline;
+}
+.login-form-container #close-login-btn{
+    position: absolute;
+    top: 1.5rem; right: 2.2rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
 
+.home{
+    background: url(./img/campus\ 1.jpeg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .row .content{
+    flex: 1 1 42rem;
+}
+.home .row .books-slider{
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
 
+.home .row .books-slider a img{
+    height: 19.5rem;
+}
 
-
-
-
-
+.home .row .books-slider a:hover img{
+    transform: scale(.9);
+}
+.home .row .books-slider .stand{
+    width: 100%;
+    margin-top: 2.5rem;
+}
+.home .row .content h3{
+    color: var(--black);
+    font-size: 4.5rem;
+}
+.home .row .content p{
+    color: var(--black);
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
 
 
 /* media querries */
@@ -219,6 +301,9 @@ body {
 
     .header .header-1 {
         padding: 2rem;
+    }
+    section{
+        padding:3rem 2rem ;
     }
 }
 
@@ -258,6 +343,13 @@ body {
 
     .header .header-1 .search-form.active {
         top: 115%;
+    }
+    .home .row .content{
+        text-align: center;
+        margin-top: 4rem;
+    }
+    .home .row .content h3{
+        font-size: 3.5rem;
     }
 
     @media (max-width:450px) {
